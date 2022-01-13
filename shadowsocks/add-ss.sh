@@ -9,12 +9,12 @@ IP=$(wget -qO- icanhazip.com);
 lastport1=$(grep "port_tls" /etc/shadowsocks-libev/akun.conf | tail -n1 | awk '{print $2}')
 lastport2=$(grep "port_http" /etc/shadowsocks-libev/akun.conf | tail -n1 | awk '{print $2}')
 if [[ $lastport1 == '' ]]; then
-tls=701
+tls=143
 else
 tls="$((lastport1+1))"
 fi
 if [[ $lastport2 == '' ]]; then
-http=80
+http=179
 else
 http="$((lastport2+1))"
 fi
